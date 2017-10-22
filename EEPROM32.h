@@ -14,7 +14,7 @@ void EEPROM_write(uint8_t address, byte size_data, size_t data)
 
 size_t EEPROM_read(uint8_t address,  byte size_data)
 {
-  size_t data;
+  size_t data = 0;
   for (byte i = size_data - 1; i > 0; --i)
   {
     data = EEPROM.read(address + i);
